@@ -1,15 +1,15 @@
 "use strict";
 
-const jordy = {
-  firstName: "George",
-  birthYear: 1991,
-  // // Below is example of enhanced object literal.
-  calcAge() {
-    return 2025 - this.birthYear;
-  },
-};
+// const jordy = {
+//   firstName: "George",
+//   birthYear: 1991,
+//   // // Below is example of enhanced object literal.
+//   calcAge() {
+//     return 2025 - this.birthYear;
+//   },
+// };
 
-console.log(jordy.calcAge());
+// console.log(jordy.calcAge());
 
 // const gabby = {
 //   firstName: "Bandy",
@@ -18,3 +18,33 @@ console.log(jordy.calcAge());
 
 // gabby.calcAge = jordy.calcAge;
 // console.log(gabby.calcAge());
+
+const jordy = {
+  firstName: "George",
+  lastName: "Lukas",
+  birthYear: 1991,
+  age: 31,
+  family: ["Alisson", "Bob"],
+};
+
+const adoptedJordy = jordy;
+adoptedJordy.lastName = "Lang";
+
+jordy.firstName = "Gelly";
+adoptedJordy.x = 23;
+
+console.log(jordy);
+console.log(adoptedJordy);
+
+const jordyCopy = { ...jordy };
+
+jordyCopy.lastName = "Linkin";
+console.log(jordyCopy);
+
+jordyCopy.family.push("Bella");
+jordyCopy.family.push("Max");
+
+jordy.family.push("Helen");
+
+console.log(jordy);
+console.log(jordyCopy);
