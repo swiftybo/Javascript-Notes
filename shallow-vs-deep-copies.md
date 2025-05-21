@@ -52,7 +52,7 @@ jordyCopy.lastName = "Linkin"
 
 #### BUT...
 
-This way of copying is not perfect... let's try changing the `family` array property.
+This way of copying is not perfect... we are <strong>unable to change nested objects </strong> like the `family` array propert. Let's try changing it:
 
 ```
 jordyCopy.family.push("Bella")
@@ -66,3 +66,18 @@ The `family` array for both `jordy` and `jordyCopy` will both have "Bella", "Max
 This is because arrays are objects. Therefore the `family` array property is actually stored in the heap and the `family` property is just storing a reference to the object in the heap (i.e. both `jordy` and `jordyCopy` have the `family` property which point to the same object in the heap).
 
 Using `const jordyCopy = { ...jordy }` only copied the first level of the object i.e. only the primitives, but NOT the <strong>nested objects</strong>. This is called a <strong>SHALLOW COPY.</strong>
+
+---
+
+### Deep Copy / Deep Clone
+
+To perform a deep copy of an object, we use the `structuredClone()` function.
+
+```
+const jordyDeepClone = structuredClone(jordy)
+
+jordyDeepClone.family.push("Rudy");
+jordyDeepClone.family.push("Bartholemew");
+```
+
+This now returns a completely new object with an amended family array object.

@@ -48,3 +48,9 @@ jordy.family.push("Helen");
 
 console.log(jordy);
 console.log(jordyCopy);
+
+const jordyDeepClone = structuredClone(jordy);
+jordyDeepClone.family.push("Rudy");
+jordyDeepClone.family.push("Bartholemew");
+
+console.log(jordyDeepClone);
