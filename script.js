@@ -142,13 +142,34 @@
 // }
 // console.log(add2(...numbers));
 
-const obj = {
-  fullName: "John Cheese",
-  favouriteFood: "Milk",
-  age: "mature",
-};
+// const obj = {
+//   fullName: "John Cheese",
+//   favouriteFood: "Milk",
+//   age: "mature",
+// };
 
-const cheeseMan = { ...obj, colour: "blue" };
+// const cheeseMan = { ...obj, colour: "blue" };
 
-console.log(cheeseMan);
-console.log(obj);
+// console.log(cheeseMan);
+// console.log(obj);
+
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let number of numbers) {
+//     sum += number;
+//   }
+//   console.log(sum);
+// };
+
+// add(2, 3);
+// add(5, 7, 8, 9);
+
+function add([...values]) {
+  let total = 0;
+  for (let value of values) {
+    total += value;
+  }
+  return total;
+}
+const numbers = [1, 5, 6];
+console.log(add(numbers));

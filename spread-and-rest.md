@@ -74,6 +74,8 @@ This will return an array containing 3 numbers as Number data types.
 
 #### Function 1
 
+<strong>(FYI: This example seems very similar to the use of the rest operator in functions (example below), however, the difference with this example is that the argument passed in is in the form of an array, which is being expanded in the function declaration.)</strong>
+
 ```
 function add([...values]) {
   let total = 0;
@@ -89,6 +91,8 @@ console.log(add(numbers));
 In this function, we expand the `values` parameter with the spread operator and run through each element with a `for` loop.
 
 When the function is called, the passed-in numbers array will now be expanded.
+
+Even though this works, this approach is not often seen as we are limiting to only accepting an array as the arguement for the add function. It is better to use a rest operator in the function and if an array is being passed in during the function call, expand the array using the spread operator.
 <br><br>
 
 #### Function 2
@@ -109,6 +113,8 @@ console.log(add(...numbers))
 
 The rest operator collects multiple elements and condenses them into an array / object.
 
+### 1. Destructuring Arrays / Objects
+
 ```
 const [a, b, ...others] = [1, 2, 3, 4, 5];
 ```
@@ -120,5 +126,24 @@ In this example we have used array destructuring with the rest operator. The res
 - `others = [3, 4, 5]`
 
 N.B. The rest operator is typically found on the LHS of "="; while the spread operator is typically found on the RHS of "=".
+
+### 2. Functions
+
+The rest operator can be used in functions to compile multiple parameters into an array.
+
+```
+const add = function(...numbers) {
+    let sum = 0;
+    for(let number of numbers) {
+        sum += number
+    }
+    console.log(sum)
+}
+
+add(2, 3);
+add( 5, 7, 8, 9);
+```
+
+Using the rest operator here allows the ``add` function to accept any number of arguments.
 
 -- END --
