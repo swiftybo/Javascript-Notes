@@ -4,7 +4,7 @@ The spread and rest operators are both expressed as `...`, however, they perform
 
 ## Spread Operator
 
-The spread operator is used to expand an iterable, it works on <strong>all</strong> iterables, including arrays, strings, maps, sets, <strong>but NOT objects</strong>. (Objects are not iterables!)
+The spread operator is used to expand an iterable into its individual elements, it works on <strong>all</strong> iterables, including arrays, strings, maps, sets, <strong>but NOT objects</strong>. (Objects are not iterables!)
 
 Here are various scenarios the spread operator can be used:
 
@@ -106,5 +106,19 @@ console.log(add(...numbers))
 -- END OF SECTION --
 
 ## Rest Operator
+
+The rest operator collects multiple elements and condenses them into an array / object.
+
+```
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+```
+
+In this example we have used array destructuring with the rest operator. The rest pattern must always be the last in the destructuring assignment. The LHS variables will return the following values:
+
+- `a = 1`,
+- `b = 2`,
+- `others = [3, 4, 5]`
+
+N.B. The rest operator is typically found on the LHS of "="; while the spread operator is typically found on the RHS of "=".
 
 -- END --
