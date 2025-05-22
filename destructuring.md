@@ -26,7 +26,7 @@ Destrucuting provides a shorthand method to do this.
 
 ---
 
-## Drstructuring Arrays
+## Destructuring Arrays
 
 The following syntax is used for array destructuring: <br>(FYI, the LHS looks like an array but it is not, it is just the destructuring assignement)
 
@@ -40,9 +40,11 @@ The original array also remains unaffected.
 
 ### Destructuring Nested Arrays
 
+We can also use array destructuring to unpack nested arrays:
+
 #### Example 1
 
-We can also use array destructuring to unpack nested arrays:
+This is how to destructure a nested array in an object.
 
 ```
 let [releaseDate1, ,releaseDate3] = obj.releaseDates
@@ -56,6 +58,8 @@ Note that there is a gap in the destructuring assignemnt. This is how elements i
 
 #### Example 2
 
+This is how to destructure a nested array in an array.
+
 ```
 const nested = [2, 4, [5, 6]]
 const [i , ,[j, k]] = nested
@@ -67,7 +71,7 @@ This will return
 - `j = 5`,
 - `k = 6`
 
-### Switching Variables
+### Switching / Mutating Variables
 
 We can also use destructuring to switch the values of variables.
 
@@ -90,3 +94,49 @@ This returns `num5 = undefined`. We can set default values (e.g. when we do not 
 const [num1, num2, num3 = 8, num 4, num5 = 28] = arr
 
 num1, num2 & num4 will equal 7, 8 & 10 respectively. The default value for num3 will be overwritten from destructuring, therefore, `num3 = 9`. However, as there is still no 4th index in `arr`, num5 will still equal the default value `28`.
+
+---
+
+## Destructuring Objects
+
+Unlike in an array, we do not need to skip elements as the order of elements in an object does not matter. However, we must use the <strong>exact</strong> property names to successfully destructure objects.
+
+```
+const {
+    firstRelease, make, releaseDates
+} = obj
+```
+
+This results in:
+
+- `firstRelease = 1878`
+- `make = 'porsche' `
+- `releaseDates = [1899, 1905, 1910, 1999]`
+
+If we want the variable names to be different from the object keys:
+
+```
+const {firstRelease: firstCarDate, make: brand, releaseDates} = obj
+```
+
+This results in:
+
+- `firstCarDate = 1878`
+- `brand = 'porsche' `
+- `releaseDates = [1899, 1905, 1910, 1999]`
+
+### Default Values
+
+We can also set default values which will get returned instead of 'undefined' when we try to access an object element which does not exist.
+
+```
+// #1
+const {make: brand = "supercar", model} = obj
+
+// #2
+const {make: brand = "supercar", model = "boxster"} = obj
+```
+
+In #1 code snippet: `brand` will return 'undefined'.
+
+in #2 code snippet: `brand` will return `boxster` - the default value.

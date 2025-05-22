@@ -63,27 +63,35 @@ const obj = {
   releaseDates: [1899, 1905, 1910, 1999],
 };
 
-// For array:
-const magicNumber = arr[1];
-console.log(magicNumber);
+// // For array:
+// const magicNumber = arr[1];
+// console.log(magicNumber);
 
-// For object:
-const carType = obj.make;
-console.log(carType);
+// // For object:
+// const carType = obj.make;
+// console.log(carType);
 
-const [num1, num2, num3, num4, num5] = arr;
+// const [num1, num2, num3, num4, num5] = arr;
 
-// console.log(num1, num2, num3, num4, num5);
+// // console.log(num1, num2, num3, num4, num5);
 
-let [releaseDate1, , releaseDate3] = obj.releaseDates;
+// let [releaseDate1, , releaseDate3] = obj.releaseDates;
 
-console.log(releaseDate1, releaseDate3);
+// console.log(releaseDate1, releaseDate3);
 
-[releaseDate1, releaseDate3] = [releaseDate3, releaseDate1];
+// [releaseDate1, releaseDate3] = [releaseDate3, releaseDate1];
 
-console.log(releaseDate1, releaseDate3);
+// console.log(releaseDate1, releaseDate3);
 
-const nested = [2, 4, [5, 6]];
-const [i, , [j, k]] = nested;
+// const nested = [2, 4, [5, 6]];
+// const [i, , [j, k]] = nested;
 
-console.log(i, j, k);
+// console.log(i, j, k);
+
+// const { firstRelease, make, releaseDates } = obj;
+
+// const { firstRelease: firstCarDate, make: brand, releaseDates } = obj;
+
+const { make: brand, model } = obj;
+
+console.log(brand, model);
