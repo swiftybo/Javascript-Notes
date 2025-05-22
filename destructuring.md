@@ -174,3 +174,6 @@ const obj = {a: 23, b: 7: c: 14}
 ```
 
 In the last line, note how `{a, b} = obj` is wrapped in ( ). These parentheses are vital to prevent an error as when we start a line with curly bracket " { ", js expects a code block.
+
+
+-- END --

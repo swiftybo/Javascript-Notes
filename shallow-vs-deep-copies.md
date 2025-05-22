@@ -44,7 +44,7 @@ const jordyCopy = { ...jordy }
 
 This creates a new object in the heap and the reference to this new object is stored in `jordyCopy`.
 
-The following code will now change the lastName propert of the `jordyCopy` object and NOT the original `jordy` object.
+The following code will now change the lastName property of the `jordyCopy` object and NOT the original `jordy` object.
 
 ```
 jordyCopy.lastName = "Linkin"
@@ -81,3 +81,5 @@ jordyDeepClone.family.push("Bartholemew");
 ```
 
 This now returns a completely new object with an amended family array object.
+
+-- END --

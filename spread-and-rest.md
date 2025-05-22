@@ -8,7 +8,11 @@ The spread operator is used to expand an iterable, it works on <strong>all</stro
 
 Here are various scenarios the spread operator can be used:
 
-### 1. Copying Existing Arrays
+### 1. Copying Existing Arrays / Objects
+
+Also covered in "shallow-vs-deep-copies.md". These are only <strong>shallow</strong> copies of the target array / object.
+
+#### Arrays:
 
 We can expand existing arrays with the spread operator to allow individual elements to be copied, instead of copying the array itself.
 
@@ -16,6 +20,24 @@ We can expand existing arrays with the spread operator to allow individual eleme
 const arr = [2, 3, 4]
 const expandedArr = [1, ...arr, 5]
 ```
+
+#### Objects:
+
+Similarly for objects:
+
+```
+const obj = {
+  fullName: "John Cheese",
+  favouriteFood: "Milk",
+  age: "mature",
+};
+
+const cheeseMan = {...obj, colour: "blue"}
+```
+
+We have copied the object and also added a new key: value. As this is a shallow copy, this new `key:value` will only be reflected in the copied `cheeseMan` object and NOT the original `obj` object.
+
+N.B. We can also use `Object.assign()` to perform a shallow copy of an object.
 
 ### 2. Join 2 Arrays
 
@@ -71,9 +93,18 @@ When the function is called, the passed-in numbers array will now be expanded.
 
 #### Function 2
 
+In this function, the function is expecting 3 parameters. In the function call, the spread operator is used to expand the `numbers` array for the function execution.
+
 ```
 function add(value1, value2, value3) {
   return value1 + value2 + value3
 }
 console.log(add(...numbers))
 ```
+
+<br>
+-- END OF SECTION --
+
+## Rest Operator
+
+-- END --

@@ -125,6 +125,7 @@
 //   Number(prompt("First number: ")),
 //   Number(prompt("Second number: ")),
 //   Number(prompt("Third number: ")),
+//   Number(prompt("Fourth number: ")),
 // ];
 
 // function add([...values]) {
@@ -140,3 +141,14 @@
 //   return value1 + value2 + value3;
 // }
 // console.log(add2(...numbers));
+
+const obj = {
+  fullName: "John Cheese",
+  favouriteFood: "Milk",
+  age: "mature",
+};
+
+const cheeseMan = { ...obj, colour: "blue" };
+
+console.log(cheeseMan);
+console.log(obj);

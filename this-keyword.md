@@ -78,3 +78,6 @@ This can be solved by using regular function declaration:
 #### 4. Event Listener
 
 If a function is called as an event listener, the 'this' variable will point to the DOM element that the handler is attached to.
+
+
+-- END --
