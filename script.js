@@ -55,11 +55,12 @@
 
 // console.log(jordyDeepClone);
 
-const arr = [7, 8, 9];
+const arr = [7, 8, 9, 10];
 const obj = {
   make: "porsche",
   country: "germany",
   firstRelease: 1878,
+  releaseDates: [1899, 1905, 1910, 1999],
 };
 
 // For array:
@@ -69,3 +70,20 @@ console.log(magicNumber);
 // For object:
 const carType = obj.make;
 console.log(carType);
+
+const [num1, num2, num3, num4, num5] = arr;
+
+// console.log(num1, num2, num3, num4, num5);
+
+let [releaseDate1, , releaseDate3] = obj.releaseDates;
+
+console.log(releaseDate1, releaseDate3);
+
+[releaseDate1, releaseDate3] = [releaseDate3, releaseDate1];
+
+console.log(releaseDate1, releaseDate3);
+
+const nested = [2, 4, [5, 6]];
+const [i, , [j, k]] = nested;
+
+console.log(i, j, k);
