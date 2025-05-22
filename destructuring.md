@@ -11,6 +11,9 @@ const obj = {
   country: "germany",
   firstRelease: 1878,
   releaseDates: [1899, 1905, 1910, 1999]
+  owners: { john: "boxster",
+  diego: "carrera"
+  }
 };
 
 // For array:
@@ -71,14 +74,6 @@ This will return
 - `j = 5`,
 - `k = 6`
 
-### Switching / Mutating Variables
-
-We can also use destructuring to switch the values of variables.
-
-```
-[releaseDate1, releaseDate3] = [releaseDate3, releaseDate1]
-```
-
 ### Default Values
 
 At the top, we had destructured the following array:
@@ -94,6 +89,14 @@ This returns `num5 = undefined`. We can set default values (e.g. when we do not 
 const [num1, num2, num3 = 8, num 4, num5 = 28] = arr
 
 num1, num2 & num4 will equal 7, 8 & 10 respectively. The default value for num3 will be overwritten from destructuring, therefore, `num3 = 9`. However, as there is still no 4th index in `arr`, num5 will still equal the default value `28`.
+
+### Switching / Mutating Variables
+
+We can also use destructuring to switch the values of variables.
+
+```
+[releaseDate1, releaseDate3] = [releaseDate3, releaseDate1]
+```
 
 ---
 
@@ -140,3 +143,34 @@ const {make: brand = "supercar", model = "boxster"} = obj
 In #1 code snippet: `brand` will return 'undefined'.
 
 in #2 code snippet: `brand` will return `boxster` - the default value.
+
+### Nested Object
+
+```
+const {
+  owners: { john: johnathon, diego },
+} = obj;
+
+console.log(johnathon, diego);
+```
+
+This results in:
+
+- johnathon = "boxster"
+- diego = "carrera"
+
+Note how we also redefined the 'john' variable.
+
+### Switching / Mutating Variables
+
+We can also use destructuring to switch the values of variables, however, for objects there is an extra parentheses to look out for:
+
+```
+let a = 111;
+let b = 999;
+const obj = {a: 23, b: 7: c: 14}
+
+({a, b} = obj)
+```
+
+In the last line, note how `{a, b} = obj` is wrapped in ( ). These parentheses are vital to prevent an error as when we start a line with curly bracket " { ", js expects a code block.

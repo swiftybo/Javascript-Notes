@@ -61,6 +61,7 @@ const obj = {
   country: "germany",
   firstRelease: 1878,
   releaseDates: [1899, 1905, 1910, 1999],
+  owners: { john: "boxster", diego: "carrera" },
 };
 
 // // For array:
@@ -95,3 +96,11 @@ const obj = {
 const { make: brand, model } = obj;
 
 console.log(brand, model);
+
+console.log(obj.owners.diego);
+
+const {
+  owners: { john: johnathon, diego },
+} = obj;
+
+console.log(johnathon, diego);
