@@ -146,4 +146,5 @@ add( 5, 7, 8, 9);
 
 Using the rest operator here allows the ``add` function to accept any number of arguments.
 
+<br>
 -- END --
