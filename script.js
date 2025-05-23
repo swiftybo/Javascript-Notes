@@ -164,12 +164,36 @@
 // add(2, 3);
 // add(5, 7, 8, 9);
 
-function add([...values]) {
-  let total = 0;
-  for (let value of values) {
-    total += value;
-  }
-  return total;
-}
-const numbers = [1, 5, 6];
-console.log(add(numbers));
+// function add([...values]) {
+//   let total = 0;
+//   for (let value of values) {
+//     total += value;
+//   }
+//   return total;
+// }
+// const numbers = [1, 5, 6];
+// console.log(add(numbers));
+
+const restaurant = {
+  name: "Jade Palace",
+  numSeats: 38,
+  currentCustomers: 0,
+  openingHours: {
+    mon: {
+      open: 10,
+      close: 17,
+    },
+    sat: {
+      open: 10,
+      close: 17,
+    },
+    wed: {
+      open: 9,
+      close: 15,
+    },
+  },
+};
+
+// console.log(restaurant.openingHours.tues.close);
+
+console.log(restaurant.openingHours?.sat?.close);
