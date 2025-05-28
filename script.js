@@ -247,19 +247,32 @@
 //   console.log(`the index is ${index}, and the value is ${element}`);
 // }
 
-const ordersSet = new Set([
+// const ordersSet = new Set([
+//   "pasta",
+//   "pizza",
+//   "risotto",
+//   "pasta",
+//   "pasta",
+//   "risotto",
+// ]);
+
+// console.log(ordersSet);
+
+// console.log(new Set("Johnathon"));
+
+// for (const order of ordersSet) {
+//   console.log(order);
+// }
+
+const orders = [
   "pasta",
   "pizza",
   "risotto",
   "pasta",
   "pasta",
   "risotto",
-]);
+  "garlic bread",
+  "garlic bread",
+];
 
-console.log(ordersSet);
-
-console.log(new Set("Johnathon"));
-
-for (const order of ordersSet) {
-  console.log(order);
-}
+const uniqueOrders = [...new Set(orders)];
