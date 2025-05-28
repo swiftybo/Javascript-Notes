@@ -292,7 +292,10 @@ const restaurant = new Map([
   [1, "Sweet & Sour Chicken Balls"],
 ]);
 
-console.log(restaurant);
+// console.log(restaurant);
+
+console.log(restaurant.values());
+console.log([...restaurant.values()]);
 
 // const shop = {
 //   name: "Lucario Lentils",
@@ -310,8 +313,8 @@ console.log(restaurant);
 //   }
 // }
 
-const keys = [...restaurant.keys()];
-console.log(keys);
+// const keys = [...restaurant.keys()];
+// console.log(keys);
 
-const values = [...restaurant.values()];
-console.log(values);
+// const values = [...restaurant.values()];
+// console.log(values);
