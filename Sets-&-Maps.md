@@ -12,6 +12,8 @@ A set is a collection of unique values. The main use case of Sets is to remove d
 - The order of elements in the set is irrelevent (unlike arrays), therefore we <strong>cannot</strong> use indexes as they do not exist in arrays.
 - There is no way to get certain elements out of a Set, however, it is not neceesary as all values are unique. If we want ordered elements, use an <strong>array!</strong>
 
+<br>
+
 ```
 const ordersSet = new Set(["pasta", "pizza", "risotto", "pasta", "pasta", "risotto"])
 
@@ -59,7 +61,13 @@ const uniqueOrders = [...new Set(orders)]
 
 ## Maps
 
-A data structure which stores data in key:value pairs (just like in objects). However, in Maps, keys can have any type. (In objects, keys are always strings.)
+A data structure which stores data in key : value pairs (just like in objects). However, in Maps, keys can have any type. (In objects, keys are always strings.)
+
+Additional notes:
+
+- Maps are (also) iterables.
+
+<br>
 
 Creating a new Map involves the `new` keyword and using an array of arrays.
 
@@ -80,3 +88,29 @@ const restaurant = new Map([
 - Map.delete(_key_) - deletes the specified key in the Map.
 - Map.size - returns the number of key:value pairs in the Map.
 - Map.clear() - deletes all the key:value pairs in the Map.
+
+#### \*\*Converting Object to Map
+
+When using the Object.entries() method, this returns an array of arrays. We can pass this into `new Map` to convert the object to a map.
+
+```
+const shop = {
+  name: "Lucario Lentils",
+  owner: "Riolu",
+  storefrontColour: ["blue", "white"],
+};
+
+const shopMap = new Map(Object.entries(shop));
+```
+
+`shopMap` returns `{'name' => 'Lucario Lentils', 'owner' => 'Riolu', 'storefrontColour' => Array(2)}`
+
+#### \*\*Map Iteration
+
+```
+for (const [key, value] of restaurant) {
+  if (typeof key === "number") {
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
+```

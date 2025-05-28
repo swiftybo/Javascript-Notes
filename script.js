@@ -285,8 +285,6 @@
 //   .set(2, "Bury, England")
 //   .set("cuisine", ["chinese", "thai"]);
 
-// console.log(restaurant);
-
 const restaurant = new Map([
   ["name", "Jade Palace"],
   ["location", "Hamilton, Scotland"],
@@ -295,3 +293,19 @@ const restaurant = new Map([
 ]);
 
 console.log(restaurant);
+
+// const shop = {
+//   name: "Lucario Lentils",
+//   owner: "Riolu",
+//   storefrontColour: ["blue", "white"],
+// };
+
+// console.log(Object.entries(shop));
+
+// console.log(new Map(Object.entries(shop)));
+
+for (const [key, value] of restaurant) {
+  if (typeof key === "number") {
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
