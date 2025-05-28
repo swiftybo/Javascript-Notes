@@ -69,7 +69,7 @@ Additional notes:
 
 <br>
 
-Creating a new Map involves the `new` keyword and using an array of arrays.
+Creating a new Map involves the `new` keyword and using an array of arrays. Note this is not how the map stores this data, i.e. it will NOT be in the form of a nested array in an array, so we cannot use indexing to get map elements.
 
 ```
 const restaurant = new Map([
@@ -79,6 +79,8 @@ const restaurant = new Map([
     [1, "Sweet & Sour Chicken Balls"]
 ]);
 ```
+
+`restaurant` returns `{'name' => 'Jade Palace', 'location' => 'Hamilton, Scotland', 'cuisine' => Array(2), 1 => 'Sweet & Sour Chicken Balls'}`
 
 ### Other Useful Map Methods
 
@@ -114,3 +116,23 @@ for (const [key, value] of restaurant) {
   }
 }
 ```
+
+#### \*\*Converting Map to Array
+
+To convert the Map to an Array we do the following:
+
+```
+console.log([...restaurant])
+```
+
+As the map was constructed using an array of arrays, using the spread operator will unpack the Map key:values and return each as an array (in the array).
+
+We can use this to also get the "keys" & "values"
+
+```
+const keys = [...restaurant.keys()];
+
+const values = [...restaurant.values()];
+```
+
+these return arrays `['name', 'location', 'cuisine', 1]` and `['Jade Palace', 'Hamilton, Scotland', Array(2), 'Sweet & Sour Chicken Balls']`

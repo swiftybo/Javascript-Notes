@@ -304,8 +304,14 @@ console.log(restaurant);
 
 // console.log(new Map(Object.entries(shop)));
 
-for (const [key, value] of restaurant) {
-  if (typeof key === "number") {
-    console.log(`Answer ${key}: ${value}`);
-  }
-}
+// for (const [key, value] of restaurant) {
+//   if (typeof key === "number") {
+//     console.log(`Answer ${key}: ${value}`);
+//   }
+// }
+
+const keys = [...restaurant.keys()];
+console.log(keys);
+
+const values = [...restaurant.values()];
+console.log(values);
