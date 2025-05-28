@@ -264,15 +264,34 @@
 //   console.log(order);
 // }
 
-const orders = [
-  "pasta",
-  "pizza",
-  "risotto",
-  "pasta",
-  "pasta",
-  "risotto",
-  "garlic bread",
-  "garlic bread",
-];
+// const orders = [
+//   "pasta",
+//   "pizza",
+//   "risotto",
+//   "pasta",
+//   "pasta",
+//   "risotto",
+//   "garlic bread",
+//   "garlic bread",
+// ];
 
-const uniqueOrders = [...new Set(orders)];
+// const uniqueOrders = [...new Set(orders)];
+
+// const restaurant = new Map();
+
+// restaurant.set("name", "Jade Palace");
+// restaurant
+//   .set(1, "Hamilton, Scotland")
+//   .set(2, "Bury, England")
+//   .set("cuisine", ["chinese", "thai"]);
+
+// console.log(restaurant);
+
+const restaurant = new Map([
+  ["name", "Jade Palace"],
+  ["location", "Hamilton, Scotland"],
+  ["cuisine", ["chinese", "thai"]],
+  [1, "Sweet & Sour Chicken Balls"],
+]);
+
+console.log(restaurant);

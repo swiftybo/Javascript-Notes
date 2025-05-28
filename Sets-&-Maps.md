@@ -56,3 +56,27 @@ const uniqueOrders = [...new Set(orders)]
 - _firstSet_.intersection(_secondSet_) - this returns a **new** Set with **only** the elements which are present in **both** of the sets.
 - _firstSet_.union(_secondSet_) - this returns a **new** Set with all the elements from **both** sets (without duplicates).
 - _firstSet_.difference(_secondSet_) - this returns a **new** Set with the elements which are unique in the firstSet.
+
+## Maps
+
+A data structure which stores data in key:value pairs (just like in objects). However, in Maps, keys can have any type. (In objects, keys are always strings.)
+
+Creating a new Map involves the `new` keyword and using an array of arrays.
+
+```
+const restaurant = new Map([
+    ["name", "Jade Palace"],
+    ["location", "Hamilton, Scotland"],
+    ["cuisine", ["chinese", "thai"]],
+    [1, "Sweet & Sour Chicken Balls"]
+]);
+```
+
+### Other Useful Map Methods
+
+- Map.set(key, value) - adds key:value pair to the Map. .set() method can be chained.
+- Map.get(_key_) - returns the 'value' with the specified key.
+- Map.has(_key_) - returns a Boolean if the specified key exists in the Map.
+- Map.delete(_key_) - deletes the specified key in the Map.
+- Map.size - returns the number of key:value pairs in the Map.
+- Map.clear() - deletes all the key:value pairs in the Map.
