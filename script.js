@@ -198,24 +198,24 @@
 
 // console.log(restaurant.openingHours?.sat?.close);
 
-const porsche = {
-  Boxster986: {
-    releaseDate: 1996,
-    endDate: 2004,
-  },
-  Cayenne: {
-    releaseDate: 2002,
-    endDate: "present",
-  },
-  Panamera: {
-    releaseDate: 2009,
-    endDate: "present",
-  },
-  Spyder918: {
-    releaseDate: 2013,
-    endDate: 2015,
-  },
-};
+// const porsche = {
+//   Boxster986: {
+//     releaseDate: 1996,
+//     endDate: 2004,
+//   },
+//   Cayenne: {
+//     releaseDate: 2002,
+//     endDate: "present",
+//   },
+//   Panamera: {
+//     releaseDate: 2009,
+//     endDate: "present",
+//   },
+//   Spyder918: {
+//     releaseDate: 2013,
+//     endDate: 2015,
+//   },
+// };
 
 // console.log(porsche.Cayenne.endDate);
 
@@ -239,10 +239,27 @@ const porsche = {
 //   );
 // }
 
-const cars = ["vauxhall", "renault", "nissan", "fiat"];
+// const cars = ["vauxhall", "renault", "nissan", "fiat"];
 
-console.log(cars.entries());
+// console.log(cars.entries());
 
-for (const [index, element] of cars.entries()) {
-  console.log(`the index is ${index}, and the value is ${element}`);
+// for (const [index, element] of cars.entries()) {
+//   console.log(`the index is ${index}, and the value is ${element}`);
+// }
+
+const ordersSet = new Set([
+  "pasta",
+  "pizza",
+  "risotto",
+  "pasta",
+  "pasta",
+  "risotto",
+]);
+
+console.log(ordersSet);
+
+console.log(new Set("Johnathon"));
+
+for (const order of ordersSet) {
+  console.log(order);
 }
