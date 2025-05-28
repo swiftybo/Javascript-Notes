@@ -174,26 +174,75 @@
 // const numbers = [1, 5, 6];
 // console.log(add(numbers));
 
-const restaurant = {
-  name: "Jade Palace",
-  numSeats: 38,
-  currentCustomers: 0,
-  openingHours: {
-    mon: {
-      open: 10,
-      close: 17,
-    },
-    sat: {
-      open: 10,
-      close: 17,
-    },
-    wed: {
-      open: 9,
-      close: 15,
-    },
-  },
-};
+// const restaurant = {
+//   name: "Jade Palace",
+//   numSeats: 38,
+//   currentCustomers: 0,
+//   openingHours: {
+//     mon: {
+//       open: 10,
+//       close: 17,
+//     },
+//     sat: {
+//       open: 10,
+//       close: 17,
+//     },
+//     wed: {
+//       open: 9,
+//       close: 15,
+//     },
+//   },
+// };
 
 // console.log(restaurant.openingHours.tues.close);
 
-console.log(restaurant.openingHours?.sat?.close);
+// console.log(restaurant.openingHours?.sat?.close);
+
+const porsche = {
+  Boxster986: {
+    releaseDate: 1996,
+    endDate: 2004,
+  },
+  Cayenne: {
+    releaseDate: 2002,
+    endDate: "present",
+  },
+  Panamera: {
+    releaseDate: 2009,
+    endDate: "present",
+  },
+  Spyder918: {
+    releaseDate: 2013,
+    endDate: 2015,
+  },
+};
+
+// console.log(porsche.Cayenne.endDate);
+
+// for (const model of Object.keys(porsche)) {
+//   console.log(model);
+// }
+
+// console.log(Object.keys(porsche));
+
+// console.log(Object.values(porsche));
+
+// console.log(Object.entries(porsche));
+
+// for (const newEntry of Object.entries(porsche)) {
+//   console.log(newEntry);
+// }
+
+// for (const [key, { releaseDate, ended }] of Object.entries(porsche)) {
+//   console.log(
+//     `The car is ${key} and it was released in ${releaseDate} and production kept going until ${ended}`
+//   );
+// }
+
+const cars = ["vauxhall", "renault", "nissan", "fiat"];
+
+console.log(cars.entries());
+
+for (const [index, element] of cars.entries()) {
+  console.log(`the index is ${index}, and the value is ${element}`);
+}
