@@ -285,17 +285,17 @@
 //   .set(2, "Bury, England")
 //   .set("cuisine", ["chinese", "thai"]);
 
-const restaurant = new Map([
-  ["name", "Jade Palace"],
-  ["location", "Hamilton, Scotland"],
-  ["cuisine", ["chinese", "thai"]],
-  [1, "Sweet & Sour Chicken Balls"],
-]);
+// const restaurant = new Map([
+//   ["name", "Jade Palace"],
+//   ["location", "Hamilton, Scotland"],
+//   ["cuisine", ["chinese", "thai"]],
+//   [1, "Sweet & Sour Chicken Balls"],
+// ]);
 
-// console.log(restaurant);
+// // console.log(restaurant);
 
-console.log(restaurant.values());
-console.log([...restaurant.values()]);
+// console.log(restaurant.values());
+// console.log([...restaurant.values()]);
 
 // const shop = {
 //   name: "Lucario Lentils",
