@@ -160,8 +160,6 @@ bookEW(888, "Georgy")
 // arguments are the same as those needed by the original method i.e. flightNum & name.
 ```
 
-<br>
-
 ##### Binding Other Arguments (aka. partial application):
 
 The bind method can also be used to define pre-set arguments. (Not default, as once set, these arguments cannot be changed):
@@ -182,4 +180,25 @@ Syntax would look like this when attaching a callback Fn to a button click.
 
 ```
 document.querySelector("button").addEventListener("click", definedFunction.bind(target))
+```
+
+### 4. Immediately Invoked Function Expressions (IIFE)
+
+IIFE are functions which are run only once. (They are called at the same time as they are 'declared'.)
+
+This is how to create an IIFE:
+
+```
+(function () {
+    console.log("This will only run once!")
+})()
+```
+
+- Within the first set of parentheses is a regular function expression (not assigned to a variable).
+- The second set of parentheses is (immediately) calling the function expression.
+
+Can aslo write this as an arrow function:
+
+```
+(() => console.log("This will only run once!")())
 ```
