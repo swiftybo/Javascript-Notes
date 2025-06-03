@@ -31,3 +31,15 @@ arr.slice(-1) => returns [33]
 arr.slice(-1)[0] => returns 33
 
 ```
+
+## Data Tranformation: Map Method
+
+Map is similar to the forEach method in that a callBack Fn manipulates each of the elements in the original array. However, the Map method will return a **new array** (unlike the forEach method)
+
+## Data Tranformation: Filter Method
+
+Filters all elements in the original array which satisfy a certain condition. This returns a **new filtered array** containing only the elements which met the conditions.
+
+## Data Tranformation: Reduce Method
+
+"Reduces" / "Boils" down all the array elements into a single value (e.g. adding all the elementss of the original array together).
