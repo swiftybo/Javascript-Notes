@@ -202,3 +202,11 @@ Can aslo write this as an arrow function:
 ```
 (() => console.log("This will only run once!")())
 ```
+
+### 5. Closures
+
+A closure gives a function access to all the variables of its parent function, even **after** that parent function has returned. The function keeps a reference to its outer scope, which preserves the scope chain throughout time.
+
+i.e. a closure makes sure that a function does not lose connection to the variables that existed where the function was created.
+
+N.B. we cannot access closed-over variables explicitly. (However, we can view them in the console)
