@@ -174,6 +174,8 @@ arr.sort(function(a, b){
 })
 ```
 
+Note: `a` and `b` are temporary variables for each element & the next. Similar to how Callback Fns require this to be defined.
+
 #### Array of Mixed Types
 
 Don't bother using the sort() and toSorted() methods for arrays with mixed types...it won't work.
