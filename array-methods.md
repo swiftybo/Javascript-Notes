@@ -120,7 +120,7 @@ If only looking for an equality, use .includes() <br>
 If looking for if **any** values meets a condition, then use some() <br>
 If looking for if **all / every** values meet a condition, then use every() <br>
 
-### Using the .flat() method
+## Using the .flat() method
 
 The flat method is used to "flatten" a nested array: <br>
 N.B. The flat method creates a new array and does **not** mutate the original array.
@@ -133,7 +133,7 @@ nestedArr.flat()
 
 returns `[1, 2, 3, 4, 5]`. The default is that the flat method only goes 1 layer deep. The.flat() method has a depth argument which will go into deeper layers of nesting.
 
-### Using the .sort() method
+## Using the .sort() method
 
 **Mutates** the original array. Another method exists .toSorted() which performs the same as the sort() method but returns a copy of the original array instead of mutating it. The following
 
