@@ -337,4 +337,26 @@
 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////
 
-// ARRAY METHODS:
+const day = new Date("July 9 2025 11:52");
+const day2 = new Date("9 Feb 25 11:52:08:16");
+const day3 = new Date("2024-11-18T21:31:17.178Z");
+const day4 = new Date(2030, 10, 19, 15, 23, 5);
+const day5 = new Date(2025, 10, 33);
+
+console.log(day.getTime());
+
+console.log(day);
+console.log(day2);
+console.log(day3);
+console.log(day4);
+console.log(day5);
+
+const unixDay = new Date(0);
+console.log(unixDay);
+
+const someDay = new Date(2037, 9, 10, 14, 28);
+console.log(someDay);
+
+console.log(someDay.getDay());
+
+console.log(someDay.toISOString());
