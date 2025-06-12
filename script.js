@@ -337,26 +337,68 @@
 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////
 
-const day = new Date("July 9 2025 11:52");
-const day2 = new Date("9 Feb 25 11:52:08:16");
-const day3 = new Date("2024-11-18T21:31:17.178Z");
-const day4 = new Date(2030, 10, 19, 15, 23, 5);
-const day5 = new Date(2025, 10, 33);
+// const day = new Date("July 9 2025 11:52");
+// const day2 = new Date("9 Feb 25 11:52:08:16");
+// const day3 = new Date("2024-11-18T21:31:17.178Z");
+// const day4 = new Date(2030, 10, 19, 15, 23, 5);
+// const day5 = new Date(2025, 10, 33);
 
-console.log(day.getTime());
+// console.log(day.getTime());
 
-console.log(day);
-console.log(day2);
-console.log(day3);
-console.log(day4);
-console.log(day5);
+// console.log(day);
+// console.log(day2);
+// console.log(day3);
+// console.log(day4);
+// console.log(day5);
 
-const unixDay = new Date(0);
-console.log(unixDay);
+// const unixDay = new Date(0);
+// console.log(unixDay);
 
-const someDay = new Date(2037, 9, 10, 14, 28);
-console.log(someDay);
+// const someDay = new Date(2037, 9, 10, 14, 28);
+// console.log(someDay);
 
-console.log(someDay.getDay());
+// console.log(someDay.getDay());
 
-console.log(someDay.toISOString());
+// console.log(someDay.toISOString());
+
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+
+Person.prototype.calcAge = function () {
+  return 2025 - this.birthYear;
+};
+
+const jonas = new Person("Jonas", 1996);
+jonas.lastName = "Hooler";
+
+// console.log(jonas.__proto__);
+// console.log(Object.getPrototypeOf(jonas));
+console.log(Person.prototype);
+
+// console.log(Person.prototype);
+
+// console.log(Person.__proto__);
+
+// console.log(Object.getPrototypeOf(Person.constructor));
+
+class PersonCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+
+  // Writing methods here automatically adds them to the prototype property. We do not need to set it manually like in constructor functions.
+  calcAge() {
+    console.log(2025 - this.birthYear);
+  }
+}
+
+const larry = new PersonCl("Larry", 1987);
+
+PersonCl.prototype.greet = function () {
+  console.log(`Hey ${this.firstName}!`);
+};
+
+PersonCl.prototype.hobby = "fishing";

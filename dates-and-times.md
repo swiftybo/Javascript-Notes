@@ -28,7 +28,7 @@ This returns
 - Tue Nov 19 2030 15:23:05 GMT+0000 (Greenwich Mean Time)
 - Wed Dec 03 2025 00:00:00 GMT+0000 (Greenwich Mean Time)
 
-Further notes:
+Extra notes:
 <br>
 
 - day2 : `new Date()` constructor is flexible in parsing date strings. It only goes down to "seconds" and does not display "microseconds".
